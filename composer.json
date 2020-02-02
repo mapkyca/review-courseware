@@ -11,6 +11,6 @@
         "mapkyca/known-dev-scripts": "^1.3"
     },
     "extra": {
-        "installer-name": "ReviewCourseware"
+        "installer-name": "Courseware"
     }
 }
