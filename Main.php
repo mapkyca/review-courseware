@@ -12,7 +12,7 @@ class Main {
 
 	\Idno\Core\Idno::site()->language()->register(
 		new \Idno\Core\GetTextTranslation(
-			'courseware', dirname(__FILE__) . '/languages/'
+			'reviewcourseware', dirname(__FILE__) . '/languages/'
 		)
 	);
     }

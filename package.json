@@ -1,0 +1,8 @@
+{
+  "name": "ReviewCourseware",
+  "version": "1.0.0",
+  "description": "reView Courseware plugin",
+  "devDependencies": {
+    "grunt": "^1.0.3"
+  }
+}
