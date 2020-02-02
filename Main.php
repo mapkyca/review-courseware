@@ -2,7 +2,7 @@
 
 namespace IdnoPlugins\Courseware;
 
-class Main {
+class Main extends \Idno\Common\Plugin {
 
     function registerPages() {
 	
