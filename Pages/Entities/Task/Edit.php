@@ -1,6 +1,6 @@
 <?php
 
-namespace IdnoPlugins\Pages\Entities\Task;
+namespace IdnoPlugins\Courseware\Pages\Entities\Task;
 
 use Idno\Core\Idno;
 use Idno\Common\Page;

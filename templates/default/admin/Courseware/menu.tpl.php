@@ -1,0 +1,1 @@
+<li <?php if ($_SERVER['REQUEST_URI'] == '/admin/courseware/') echo 'class="active"'; ?>><a href="<?php echo \Idno\Core\Idno::site()->config()->getDisplayURL()?>admin/courseware/"><?php echo \Idno\Core\Idno::site()->language()->_('Courseware'); ?></a></li>

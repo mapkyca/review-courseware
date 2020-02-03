@@ -1,6 +1,6 @@
 <?php
 
-namespace IdnoPlugins\Pages\Entities\Schedule;
+namespace IdnoPlugins\Courseware\Pages\Entities\Schedule;
 
 use Idno\Core\Idno;
 use Idno\Common\Page;

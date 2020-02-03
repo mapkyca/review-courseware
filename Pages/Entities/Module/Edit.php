@@ -1,6 +1,6 @@
 <?php
 
-namespace IdnoPlugins\Pages\Entities\Module;
+namespace IdnoPlugins\Courseware\Pages\Entities\Module;
 
 use Idno\Core\Idno;
 use Idno\Common\Page;

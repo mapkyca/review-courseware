@@ -11,18 +11,36 @@ trait Definition {
      * Fields available in this entity.
      * @return variable => viewtype
      */
-    abstract protected function fields() : array;
+    abstract public function fields() : array;
     
     /**
      * Field defaults.
      * @return variable => default value
      */
-    abstract protected function fieldsDefaults() : array;
+    abstract public function fieldsDefaults() : array;
     
     /**
      * Field defaults.
      * @return variable => bool
      */
-    abstract protected function fieldsRequired() : array;
+    abstract public function fieldsRequired() : array;
+    
+    /**
+     * Field labels
+     * @return variable => text
+     */
+    abstract public function fieldsLabels() : array;
+    
+    /**
+     * Field placeholders
+     * @return variable => text
+     */
+    abstract public function fieldsPlaceholders() : array;
+    
+    /**
+     * Field help text
+     * @return variable => text
+     */
+    abstract public function fieldsHelp() : array;
     
 }
