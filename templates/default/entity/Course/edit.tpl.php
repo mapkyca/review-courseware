@@ -24,14 +24,14 @@
 	    
 	</div>
 	
-	<div class="row">
+	<div class="row" style="margin-top:20px;">
 	    <?php
 	    if (!empty($vars['object'])) {
 		?>
 	    
-	    <a href="<?php echo \Idno\Core\Idno::site()->config()->getDisplayURL() ?>schedule/edit" class="btn btn-lg"><?php echo \Idno\Core\Idno::site()->language()->_('Add a Schedule'); ?></a>
+	    <a href="<?php echo \Idno\Core\Idno::site()->config()->getDisplayURL() ?>schedule/edit" class="btn btn-lg btn-primary"><?php echo \Idno\Core\Idno::site()->language()->_('Add a Schedule'); ?></a>
 	    
-	    <a href="<?php echo \Idno\Core\Idno::site()->config()->getDisplayURL() ?>module/edit" class="btn btn-lg"><?php echo \Idno\Core\Idno::site()->language()->_('Add a Module'); ?></a>
+	    <a href="<?php echo \Idno\Core\Idno::site()->config()->getDisplayURL() ?>module/edit" class="btn btn-lg btn-primary"><?php echo \Idno\Core\Idno::site()->language()->_('Add a Module'); ?></a>
 	    
 	    <?php
 	    }

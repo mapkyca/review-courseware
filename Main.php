@@ -18,6 +18,8 @@ class Main extends \Idno\Common\Plugin {
 	}
 	
 	\Idno\Core\Idno::site()->template()->extendTemplate('admin/menu/items', 'admin/Courseware/menu');
+	\Idno\Core\Idno::site()->template()->extendTemplate('settings-shell/css', 'settings-shell/Courseware/css');
+	\Idno\Core\Idno::site()->template()->extendTemplate('settings-shell/javascript', 'settings-shell/Courseware/javascript');
     }
 
     function registerTranslations() {

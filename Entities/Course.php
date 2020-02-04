@@ -37,7 +37,11 @@ class Course extends CoursewareEntity {
     }
 
     public function fieldsRequired(): array {
-	return [];
+	return [
+	    'name',
+	    'image',
+	    'description'
+	];
     }
 
     public function fieldsHelp(): array {
