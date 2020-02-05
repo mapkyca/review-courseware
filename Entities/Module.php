@@ -6,6 +6,7 @@ namespace IdnoPlugins\Courseware\Entities;
 class Module extends CoursewareEntity {
     public function fields(): array {
 	return [
+	    'course_id' => 'hidden',
 	    'name' => 'text',
 	    'image' => 'file',
 	    'video' => 'url',
@@ -17,9 +18,7 @@ class Module extends CoursewareEntity {
 
     public function fieldsDefaults(): array {
 	return [
-	    'name',
-	    'image',
-	    'video',
+	    'course_id' => $this->course_id??\Idno\Core\Input::getInput('course_id')
 	];
     }
 
@@ -40,6 +39,9 @@ class Module extends CoursewareEntity {
 
     public function fieldsRequired(): array {
 	return [
+	    'name',
+	    'image',
+	    'video',
 	];
     }
 
