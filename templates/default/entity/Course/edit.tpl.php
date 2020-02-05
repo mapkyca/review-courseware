@@ -29,9 +29,9 @@
 	    if (!empty($vars['object'])) {
 		?>
 	    
-	    <a href="<?php echo \Idno\Core\Idno::site()->config()->getDisplayURL() ?>schedule/edit" class="btn btn-lg btn-primary"><?php echo \Idno\Core\Idno::site()->language()->_('Add a Schedule'); ?></a>
+	    <a href="<?php echo \Idno\Core\Idno::site()->config()->getDisplayURL() ?>schedule/edit?course_id=<?= $vars['object']->getID(); ?>" class="btn btn-lg btn-primary"><?php echo \Idno\Core\Idno::site()->language()->_('Add a Schedule'); ?></a>
 	    
-	    <a href="<?php echo \Idno\Core\Idno::site()->config()->getDisplayURL() ?>module/edit" class="btn btn-lg btn-primary"><?php echo \Idno\Core\Idno::site()->language()->_('Add a Module'); ?></a>
+	    <a href="<?php echo \Idno\Core\Idno::site()->config()->getDisplayURL() ?>module/edit?course_id=<?= $vars['object']->getID(); ?>" class="btn btn-lg btn-primary"><?php echo \Idno\Core\Idno::site()->language()->_('Add a Module'); ?></a>
 	    
 	    <?php
 	    }
