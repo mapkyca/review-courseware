@@ -23,12 +23,12 @@ class Course extends CoursewareEntity {
 
     public function fieldsLabels(): array {
 	return [
-	    'name' => 'Course Name',
-	    'image' => 'Upload Image',
-	    'alt' => 'Alt',
-	    'description' => 'Course Description',
-	    'objectives' => 'Objectives',
-	    'codeofconduct' => 'Do you want a code of conduct?',
+	    'name' => \Idno\Core\Idno::site()->language()->_('Course Name'),
+	    'image' => \Idno\Core\Idno::site()->language()->_('Upload Image'),
+	    'alt' => \Idno\Core\Idno::site()->language()->_('Alt'),
+	    'description' => \Idno\Core\Idno::site()->language()->_('Course Description'),
+	    'objectives' => \Idno\Core\Idno::site()->language()->_('Objectives'),
+	    'codeofconduct' => \Idno\Core\Idno::site()->language()->_('Do you want a code of conduct?'),
 	];
     }
 

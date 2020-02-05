@@ -28,7 +28,7 @@
 		?>
 		
 		<tr>
-		    <td><?= $course->name; ?></td>
+		    <td><a href="<?= $course->getUrl(); ?>"><?= $course->name; ?></a></td>
 		    <td style="width: 20%;">
 			<?php if ($course->canEdit()) { ?>
 			    <a href="<?= $course->getEditUrl() ?>" class="btn btn-primary"><?= \Idno\Core\Idno::site()->language()->_('Edit'); ?></a>

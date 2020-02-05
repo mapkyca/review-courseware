@@ -1,8 +1,43 @@
+<div class="course-form">
+    <h2><?= \Idno\Core\Idno::site()->language()->_('Add a New Module'); ?></h2>
+    
+    <form action="<?php echo $vars['object']->getURL() ?>" method="post" enctype="multipart/form-data">
 <?php
 
-/* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+    echo $this->__([
+	'form' => $vars['object']->fields(),
+	'defaults' => $vars['object']->fieldsDefaults(),
+	'required' => $vars['object']->fieldsRequired(),
+	'labels' => $vars['object']->fieldsLabels(),
+	'placeholders' => $vars['object']->fieldsPlaceholders(),
+	'values' => $vars['object']
+    ])->draw('forms/input/form-list');
+?>
+	<?php echo $this->draw('content/extra'); ?>
+	<?php echo $this->draw('content/access'); ?>
+	
+	<div class="button-bar row">
+	    <?php echo \Idno\Core\Idno::site()->actions()->signForm('/course/edit') ?>
+	    <input type="button" class="btn btn-cancel" value="<?php echo \Idno\Core\Idno::site()->language()->_('Cancel'); ?>" onclick="hideContentCreateForm();"/>
+	    <input type="submit" class="btn btn-primary" value="<?php echo \Idno\Core\Idno::site()->language()->_('Save'); ?>"/>
+	    
+	    
+	</div>
+	
+	<div class="row" style="margin-top:20px;">
+	    <?php
+	    if (!empty($vars['object'])) {
+		/*?>
+	    
+	    <a href="<?php echo \Idno\Core\Idno::site()->config()->getDisplayURL() ?>schedule/edit" class="btn btn-lg btn-primary"><?php echo \Idno\Core\Idno::site()->language()->_('Add a Schedule'); ?></a>
+	    
+	    <a href="<?php echo \Idno\Core\Idno::site()->config()->getDisplayURL() ?>module/edit" class="btn btn-lg btn-primary"><?php echo \Idno\Core\Idno::site()->language()->_('Add a Module'); ?></a>
+	    
+	    <?php */
+	    }
+	    ?>
+	</div>
+    </form>
+</div>
 
+<?php echo $this->draw('entity/edit/footer');?>
