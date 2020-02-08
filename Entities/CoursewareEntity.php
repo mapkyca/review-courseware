@@ -13,6 +13,15 @@ abstract class CoursewareEntity extends Entity {
     // Mix in field helpers
     use Fields\Definition;
 
+    public function getURL() {
+	
+	$path = explode('\\', get_class($this));
+    
+	$classname = strtolower(array_pop($path));
+	
+	return \Idno\Core\Idno::site()->config()->getDisplayURL() . 'view/' . ltrim($classname, '/') . '/' . $this->getID() . '/';
+    }
+    
     /**
      * Saves changes to this object based on user input
      * @return bool
