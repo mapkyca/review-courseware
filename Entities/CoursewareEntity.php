@@ -48,6 +48,13 @@ abstract class CoursewareEntity extends Entity {
 		case 'file':
 		case 'image-file':
 		    $files = Input::getFiles($variable);
+		    if (!isset($files['name'])) {
+			$files = array_filter($files, function($var) {
+			    return !empty($var['tmp_name']); // Filter non-filled in elements
+			});
+		    } else {
+			$files = [$files]; // Handle situations where we aren't handling array of photos
+		    }
 		    
 		    foreach ($files as $_file) {
 
@@ -95,7 +102,7 @@ abstract class CoursewareEntity extends Entity {
 						// New style thumbnails
 						$varname        =   "thumbs_{$label}";
 						if (empty($this->$varname))
-						$this->$varname = [];
+						    $this->$varname = [];
 
 						$this->$varname[$filename] = [
 						    'id'    => substr($thumbnail, 0, strpos($thumbnail, '/')),
