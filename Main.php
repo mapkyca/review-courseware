@@ -12,6 +12,7 @@ class Main extends \Idno\Common\Plugin {
 	    'Course', 'Module', 'Schedule', 'Task'
 	] as $entity) {
 	    $lower = strtolower($entity);
+	    \Idno\Core\Idno::site()->routes()->addRoute("/{$lower}/view/([A-Za-z0-9]+)/?", "\\Idno\\Pages\\Entity\\View");
 	    \Idno\Core\Idno::site()->routes()->addRoute("/{$lower}/edit/?", "\\IdnoPlugins\\Courseware\\Pages\\Entities\\{$entity}\\Edit");
 	    \Idno\Core\Idno::site()->routes()->addRoute("/{$lower}/edit/([A-Za-z0-9]+)/?", "\\IdnoPlugins\\Courseware\\Pages\\Entities\\{$entity}\\Edit");
             \Idno\Core\Idno::site()->routes()->addRoute("/{$lower}/delete/([A-Za-z0-9]+)/?", \Idno\Pages\Entity\Delete::class);
