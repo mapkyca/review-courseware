@@ -19,7 +19,7 @@ abstract class CoursewareEntity extends Entity {
     
 	$classname = strtolower(array_pop($path));
 	
-	return \Idno\Core\Idno::site()->config()->getDisplayURL() . 'view/' . ltrim($classname, '/') . '/' . $this->getID() . '/';
+	return \Idno\Core\Idno::site()->config()->getDisplayURL() . ltrim($classname, '/') . '/view/' . $this->getID() . '/';
     }
     
     /**
