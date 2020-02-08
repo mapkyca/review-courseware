@@ -77,10 +77,29 @@ $mainsrc = \Idno\Core\Idno::site()->config()->sanitizeAttachmentURL($mainsrc);
 	
     </div>
     
-    <div class="col-md-2">
+    <div class="col-md-2 modules">
 	
+	<?php
 	
-	modules
+	$modules = \IdnoPlugins\Courseware\Entities\Module::get(['course_id' => $vars['object']->getID()], [], PHP_INT_MAX);
+	
+	if ($modules) {
+	
+	    foreach ($modules as $module) {
+	    ?>
+	
+	<div class="module">
+	    
+	    module
+	    
+	</div>
+	
+	    
+	    <?php
+	    }
+	}
+	?>
+	
 	
     </div>
     
