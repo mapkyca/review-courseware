@@ -48,12 +48,29 @@ $mainsrc = \Idno\Core\Idno::site()->config()->sanitizeAttachmentURL($mainsrc);
 	
 	<div class="objectives">
 	    
+	    <?php
 	    
+	    if ($vars['object']->objectives) {
+		
+		foreach ($vars['object']->objectives as $objective) {
 	    
-	    /// objectives
+		    ?>
 	    
+	    <div class="objective">
+	
+		
+		
+		
+		
+	    </div>
+	    	    
+		    <?php
+		    
+		}
+		
+	    }
 	    
-	    
+	    ?>
 	    
 	</div>
 	
