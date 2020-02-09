@@ -1,5 +1,14 @@
-<div class="course-form">
+<div class="module-form">
+    <?php
+    if (empty($vars['object'])) {
+	?>
     <h2><?= \Idno\Core\Idno::site()->language()->_('Add a New Module'); ?></h2>
+    <?php
+    } else {
+	?>
+    <h2><?= \Idno\Core\Idno::site()->language()->_('Edit module %s', [$vars['object']->name]); ?></h2>
+    <?php
+    } ?>
     
     <form action="<?php echo $vars['object']->getURL() ?>" method="post" enctype="multipart/form-data">
 <?php
