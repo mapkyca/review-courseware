@@ -3,7 +3,7 @@
 namespace IdnoPlugins\Courseware\Pages\Entities\Module;
 
 
-    class View extends \Idno\Page\Entity\View
+    class View extends \Idno\Pages\Entity\View
     {
 
         // Handle GET requests to the entity
