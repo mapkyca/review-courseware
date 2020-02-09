@@ -84,9 +84,6 @@ if ($object) {
                     }
                     ?>
                     </div>
-                    <div class="footer">
-                        <?php echo $this->draw('content/end') ?>
-                    </div>
                 </div>
 
             </div>
