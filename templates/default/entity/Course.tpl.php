@@ -41,7 +41,7 @@ $mainsrc = \Idno\Core\Idno::site()->config()->sanitizeAttachmentURL($mainsrc);
                alt="<?php echo htmlentities(strip_tags($vars['object']->alt), ENT_QUOTES, 'UTF-8'); ?>"/>
 	</div>
 	
-	<div class="description p-summary">
+	<div class="description p-summary well">
 	    <?= $vars['object']->description; ?>
 	</div>
 	
