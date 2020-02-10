@@ -1,16 +1,144 @@
-#: ./Entities/CoursewareEntity.php:100
+#: ./Pages/Entities/Course/Edit.php:37
+msgid "Upload a picture"
+msgstr ""
+
+#: ./Pages/Entities/Course/Edit.php:39
+msgid "Edit picture details"
+msgstr ""
+
+#: ./Pages/Admin/Courseware.php:17
+msgid "Courseware"
+msgstr ""
+
+#: ./templates/default/admin/Courseware/home.tpl.php:34
+msgid "Edit"
+msgstr ""
+
+#: ./templates/default/admin/Courseware/home.tpl.php:37
+msgid "Delete"
+msgstr ""
+
+#: ./templates/default/admin/Courseware/home.tpl.php:40
+msgid "Are you sure you want to remove this course?"
+msgstr ""
+
+#: ./templates/default/admin/Courseware/home.tpl.php:59
+msgid "New Course"
+msgstr ""
+
+#: ./templates/default/entity/Course/edit.tpl.php:6
+msgid "Add a New Course"
+msgstr ""
+
+#: ./templates/default/entity/Course/edit.tpl.php:10
+msgid "Edit course %s"
+msgstr ""
+
+#: ./templates/default/entity/Course/edit.tpl.php:33
+msgid "Modules"
+msgstr ""
+
+#: ./templates/default/entity/Course/edit.tpl.php:88
+msgid "Tasks and Events"
+msgstr ""
+
+#: ./templates/default/entity/Course/edit.tpl.php:159
+msgid "Add a Schedule"
+msgstr ""
+
+#: ./templates/default/entity/Course/edit.tpl.php:161
+msgid "Add a Module"
+msgstr ""
+
+#: ./templates/default/entity/Course/edit.tpl.php:171
+msgid "Cancel"
+msgstr ""
+
+#: ./templates/default/entity/Course/edit.tpl.php:172
+msgid "Save"
+msgstr ""
+
+#: ./templates/default/entity/Course/toolbar.tpl.php:10
+msgid "Code of Conduct"
+msgstr ""
+
+#: ./templates/default/entity/Course/toolbar.tpl.php:14
+msgid "Schedule"
+msgstr ""
+
+#: ./templates/default/entity/Module/edit.tpl.php:5
+msgid "Add a New Module"
+msgstr ""
+
+#: ./templates/default/entity/Module/edit.tpl.php:9
+msgid "Edit module %s"
+msgstr ""
+
+#: ./templates/default/entity/Schedule/edit.tpl.php:6
+msgid "Add a Task"
+msgstr ""
+
+#: ./templates/default/entity/Schedule/edit.tpl.php:10
+msgid "Add an Event"
+msgstr ""
+
+#: ./Entities/CoursewareEntity.php:125
 msgid "Image wasn't attached."
 msgstr ""
 
-#: ./Entities/CoursewareEntity.php:104
+#: ./Entities/CoursewareEntity.php:129
 msgid "This doesn't seem to be an image..."
 msgstr ""
 
-#: ./Entities/CoursewareEntity.php:124
+#: ./Entities/CoursewareEntity.php:149
 msgid "We couldn't access your image for an unknown reason. Please try again."
 msgstr ""
 
-#: ./Entities/CoursewareEntity.php:138
+#: ./Entities/CoursewareEntity.php:163
 msgid "Sorry, a required field was not provided."
+msgstr ""
+
+#: ./Entities/Module.php:27
+msgid "Name"
+msgstr ""
+
+#: ./Entities/Module.php:28
+msgid "Upload Image"
+msgstr ""
+
+#: ./Entities/Module.php:29
+msgid "Link to Video"
+msgstr ""
+
+#: ./Entities/Module.php:30
+msgid "Add a reading"
+msgstr ""
+
+#: ./Entities/Module.php:31
+msgid "Add a task"
+msgstr ""
+
+#: ./Entities/Module.php:32
+msgid "Add assignment"
+msgstr ""
+
+#: ./Entities/Course.php:26
+msgid "Course Name"
+msgstr ""
+
+#: ./Entities/Course.php:28
+msgid "Alt"
+msgstr ""
+
+#: ./Entities/Course.php:29
+msgid "Course Description"
+msgstr ""
+
+#: ./Entities/Course.php:30
+msgid "Objectives"
+msgstr ""
+
+#: ./Entities/Course.php:31
+msgid "Do you want a code of conduct?"
 msgstr ""
 
