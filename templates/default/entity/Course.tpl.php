@@ -31,7 +31,7 @@ $mainsrc = \Idno\Core\Idno::site()->config()->sanitizeAttachmentURL($mainsrc);
 
 <div class="course">
     
-    <div class="col-md-offset-2 col-md-8 panel">
+    <div class="col-md-9 panel">
 	
 	<div class="title panel-heading">
 	    <h1 class="p-name"><?= $vars['object']->name; ?></h1>
@@ -79,7 +79,7 @@ $mainsrc = \Idno\Core\Idno::site()->config()->sanitizeAttachmentURL($mainsrc);
 	
     </div>
     
-    <div class="col-md-2 sidebar">
+    <div class="col-md-3 sidebar">
 	
 	<div class="author">
 	    <div class="owner p-author h-card visible-md visible-lg">
@@ -98,20 +98,24 @@ $mainsrc = \Idno\Core\Idno::site()->config()->sanitizeAttachmentURL($mainsrc);
 	if ($modules) {
 	?>
 	<div class="panel modules">
-	    <h2><?= \Idno\Core\Idno::site()->language()->_('Modules'); ?></h2>
-	    <ol>
-		<?php
-		foreach ($modules as $module) {
-		?>
+	    <div class="panel-heading">
+		<h2><?= \Idno\Core\Idno::site()->language()->_('Modules'); ?></h2>
+	    </div>
+	    <div class="panel-body">
+		<ol>
+		    <?php
+		    foreach ($modules as $module) {
+		    ?>
 
-		<li>
-		    <a href="<?= $module->getUrl(); ?>" target="_blank" class="h-event"><?= $module->getTitle(); ?></a>
-		</li>
-		<?php
-		}
+		    <li>
+			<a href="<?= $module->getUrl(); ?>" class="h-event"><?= $module->getTitle(); ?></a>
+		    </li>
+		    <?php
+		    }
 
-		?>
-	    </ol>
+		    ?>
+		</ol>
+	    </div>
 	</div>
 	<?php
 	}
@@ -124,20 +128,24 @@ $mainsrc = \Idno\Core\Idno::site()->config()->sanitizeAttachmentURL($mainsrc);
 	if ($events) {
 	?>
 	<div class="panel events">
-	    <h2><?= \Idno\Core\Idno::site()->language()->_('Events'); ?></h2>
-	    <ol>
-		<?php
-		foreach ($events as $event) {
-		?>
+	    <div class="panel-heading">
+		<h2><?= \Idno\Core\Idno::site()->language()->_('Events'); ?></h2>
+	    </div>
+	    <div class="panel-body">
+		<ol>
+		    <?php
+		    foreach ($events as $event) {
+		    ?>
 
-		<li>
-		    <a href="<?= $event->getUrl(); ?>" target="_blank" class="h-event"><?= $event->getTitle(); ?></a>
-		</li>
-		<?php
-		}
+		    <li>
+			<a href="<?= $event->getUrl(); ?>" class="h-event"><?= $event->getTitle(); ?></a>
+		    </li>
+		    <?php
+		    }
 
-		?>
-	    </ol>
+		    ?>
+		</ol>
+	    </div>
 	</div>
 	<?php
 	}

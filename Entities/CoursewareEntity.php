@@ -31,6 +31,13 @@ abstract class CoursewareEntity extends Entity {
 	return \Idno\Core\Idno::site()->config()->getDisplayURL() . 'admin/courseware/' . ltrim($classname, '/') . '/edit/' . $this->getID() . '/';
     }
     
+    public function getTitle() {
+	if (!empty($this->name))
+	    return $this->name;
+	
+	return parent::getTitle();
+    }
+    
     /**
      * Saves changes to this object based on user input
      * @return bool

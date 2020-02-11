@@ -8,6 +8,7 @@ class Module extends CoursewareEntity {
 	return [
 	    'course_id' => 'hidden',
 	    'name' => 'text',
+	    'description' => 'longtext',
 	    'image' => 'file',
 	    'video' => 'url',
 	    'readings' => 'reading',
@@ -25,6 +26,7 @@ class Module extends CoursewareEntity {
     public function fieldsLabels(): array {
 	return [
 	    'name' => \Idno\Core\Idno::site()->language()->_('Name'),
+	    'description' => \Idno\Core\Idno::site()->language()->_('Module Description'),
 	    'image' => \Idno\Core\Idno::site()->language()->_('Upload Image'),
 	    'video' => \Idno\Core\Idno::site()->language()->_('Link to Video'),
 	    'readings' => \Idno\Core\Idno::site()->language()->_('Add a reading'),
@@ -40,6 +42,7 @@ class Module extends CoursewareEntity {
     public function fieldsRequired(): array {
 	return [
 	    'name',
+	    'description',
 	    'image',
 	    'video',
 	];
