@@ -93,11 +93,38 @@ $mainsrc = \Idno\Core\Idno::site()->config()->sanitizeAttachmentURL($mainsrc);
 	
 	<?php
 	
+	$modules = IdnoPlugins\Courseware\Entities\Module::get(['course_id' => $vars['object']->getID()], [], PHP_INT_MAX);
+	
+	if ($modules) {
+	?>
+	<div class="panel modules">
+	    <h2><?= \Idno\Core\Idno::site()->language()->_('Modules'); ?></h2>
+	    <ol>
+		<?php
+		foreach ($modules as $module) {
+		?>
+
+		<li>
+		    <a href="<?= $module->getUrl(); ?>" target="_blank" class="h-event"><?= $module->getTitle(); ?></a>
+		</li>
+		<?php
+		}
+
+		?>
+	    </ol>
+	</div>
+	<?php
+	}
+	?>
+	
+	<?php
+	
 	$events = IdnoPlugins\Event\Event::get(['course_id' => $vars['object']->getID()], [], PHP_INT_MAX);
 	
 	if ($events) {
 	?>
 	<div class="panel events">
+	    <h2><?= \Idno\Core\Idno::site()->language()->_('Events'); ?></h2>
 	    <ol>
 		<?php
 		foreach ($events as $event) {
