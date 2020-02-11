@@ -6,3 +6,12 @@
 
 .course .description {
   margin-bottom: 4rem; }
+
+.course .objectives .objective {
+  height: 15rem;
+  overflow: hidden;
+  text-overflow: ellipsis; }
+
+.course .sidebar .owner .icon-container {
+  width: 100px;
+  height: 100px; }

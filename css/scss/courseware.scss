@@ -19,4 +19,24 @@
 	margin-bottom: 4rem;
     }
     
+    .objectives {
+	
+	.objective {
+	    height: 15rem;
+	    overflow: hidden;
+	    text-overflow: ellipsis;
+	}
+    }
+    
+    
+    
+    .sidebar {
+	
+	.owner {
+	    .icon-container {
+		width: 100px;
+		height: 100px;
+	    }
+	}
+    }
 }
