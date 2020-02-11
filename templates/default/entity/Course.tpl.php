@@ -1,5 +1,6 @@
 <?php
 
+$owner = $vars['object']->getOwner();
 $attachments = $vars['object']->getAttachments();
 
 $attachment = $attachments[0];
@@ -30,21 +31,22 @@ $mainsrc = \Idno\Core\Idno::site()->config()->sanitizeAttachmentURL($mainsrc);
 
 <div class="course">
     
-    <div class="col-md-offset-2 col-md-8">
+    <div class="col-md-offset-2 col-md-8 panel">
 	
-	<div class="title">
+	<div class="title panel-heading">
 	    <h1 class="p-name"><?= $vars['object']->name; ?></h1>
 	</div>
 	
-	<div class="image">
-	    <img class="u-featured" src="<?php echo $this->makeDisplayURL($src) ?>" class="u-photo"
-               alt="<?php echo htmlentities(strip_tags($vars['object']->alt), ENT_QUOTES, 'UTF-8'); ?>"/>
+	<div class="panel-body">
+	    <div class="image">
+		<img class="u-featured" src="<?php echo $this->makeDisplayURL($src) ?>" class="u-photo"
+		   alt="<?php echo htmlentities(strip_tags($vars['object']->alt), ENT_QUOTES, 'UTF-8'); ?>"/>
+	    </div>
+
+	    <div class="description p-summary">
+		<?= $this->__(['value' => $vars['object']->description, 'object' => $vars['object']])->draw('forms/output/richtext'); ?>
+	    </div>
 	</div>
-	
-	<div class="description p-summary well">
-	    <?= $vars['object']->description; ?>
-	</div>
-	
 	
 	<div class="objectives">
 	    
@@ -56,11 +58,11 @@ $mainsrc = \Idno\Core\Idno::site()->config()->sanitizeAttachmentURL($mainsrc);
 	    
 		    ?>
 	    
-	    <div class="objective">
-	
+	    <div class="objective col-md-4 panel" >
 		
-		
-		
+		<p>
+		    <?= htmlentities($objective, ENT_QUOTES, 'UTF-8'); ?>
+		</p>
 		
 	    </div>
 	    	    
@@ -77,26 +79,40 @@ $mainsrc = \Idno\Core\Idno::site()->config()->sanitizeAttachmentURL($mainsrc);
 	
     </div>
     
-    <div class="col-md-2 modules">
+    <div class="col-md-2 sidebar">
+	
+	<div class="author">
+	    <div class="owner p-author h-card visible-md visible-lg">
+		<p>
+		    <a href="<?php echo $owner->getDisplayURL() ?>" class="u-url icon-container">
+			<img class="u-photo" src="<?php echo $owner->getIcon() ?>"/></a><br/>
+		    <a href="<?php echo $owner->getDisplayURL() ?>" class="p-name u-url fn"><?php echo htmlentities(strip_tags($owner->getTitle()), ENT_QUOTES, 'UTF-8'); ?></a>
+		</p>
+	    </div>
+	</div>
 	
 	<?php
 	
-	$modules = \IdnoPlugins\Courseware\Entities\Module::get(['course_id' => $vars['object']->getID()], [], PHP_INT_MAX);
+	$events = IdnoPlugins\Event\Event::get(['course_id' => $vars['object']->getID()], [], PHP_INT_MAX);
 	
-	if ($modules) {
-	
-	    foreach ($modules as $module) {
-	    ?>
-	
-	<div class="module">
-	    
-	    module
-	    
+	if ($events) {
+	?>
+	<div class="panel events">
+	    <ol>
+		<?php
+		foreach ($events as $event) {
+		?>
+
+		<li>
+		    <a href="<?= $event->getUrl(); ?>" target="_blank" class="h-event"><?= $event->getTitle(); ?></a>
+		</li>
+		<?php
+		}
+
+		?>
+	    </ol>
 	</div>
-	
-	    
-	    <?php
-	    }
+	<?php
 	}
 	?>
 	
