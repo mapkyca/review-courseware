@@ -27,7 +27,7 @@
 	    if (!empty($vars['object'])) {
 		?>
 	
-	<div class="row">
+	<div class="row" style="margin-top:20px;">
 	    <div class="col-sm-12 col-md-2">
 		<label>
 		    <?= \Idno\Core\Idno::site()->language()->_('Modules'); ?>
@@ -82,7 +82,7 @@
 
 
 
-	<div class="row">
+	<div class="row" style="margin-top:20px;">
 	    <div class="col-sm-12 col-md-2">
 		<label>
 		    <?= \Idno\Core\Idno::site()->language()->_('Tasks and Events'); ?>

@@ -58,12 +58,16 @@ msgstr ""
 msgid "Save"
 msgstr ""
 
-#: ./templates/default/entity/Course/toolbar.tpl.php:10
+#: ./templates/default/entity/Course/toolbar.tpl.php:11
 msgid "Code of Conduct"
 msgstr ""
 
-#: ./templates/default/entity/Course/toolbar.tpl.php:14
+#: ./templates/default/entity/Course/toolbar.tpl.php:16
 msgid "Schedule"
+msgstr ""
+
+#: ./templates/default/entity/Course.tpl.php:132
+msgid "Events"
 msgstr ""
 
 #: ./templates/default/entity/Module/edit.tpl.php:5
@@ -82,43 +86,59 @@ msgstr ""
 msgid "Add an Event"
 msgstr ""
 
-#: ./Entities/CoursewareEntity.php:125
+#: ./templates/default/forms/input/objectives.tpl.php:25
+msgid "Add objective"
+msgstr ""
+
+#: ./templates/default/forms/input/codeofconduct.tpl.php:2
+msgid "Yes"
+msgstr ""
+
+#: ./templates/default/forms/input/codeofconduct.tpl.php:3
+msgid "No"
+msgstr ""
+
+#: ./Entities/CoursewareEntity.php:132
 msgid "Image wasn't attached."
 msgstr ""
 
-#: ./Entities/CoursewareEntity.php:129
+#: ./Entities/CoursewareEntity.php:136
 msgid "This doesn't seem to be an image..."
 msgstr ""
 
-#: ./Entities/CoursewareEntity.php:149
+#: ./Entities/CoursewareEntity.php:156
 msgid "We couldn't access your image for an unknown reason. Please try again."
 msgstr ""
 
-#: ./Entities/CoursewareEntity.php:163
+#: ./Entities/CoursewareEntity.php:170
 msgid "Sorry, a required field was not provided."
 msgstr ""
 
-#: ./Entities/Module.php:27
+#: ./Entities/Module.php:28
 msgid "Name"
 msgstr ""
 
-#: ./Entities/Module.php:28
-msgid "Upload Image"
-msgstr ""
-
 #: ./Entities/Module.php:29
-msgid "Link to Video"
+msgid "Module Description"
 msgstr ""
 
 #: ./Entities/Module.php:30
-msgid "Add a reading"
+msgid "Upload Image"
 msgstr ""
 
 #: ./Entities/Module.php:31
-msgid "Add a task"
+msgid "Link to Video"
 msgstr ""
 
 #: ./Entities/Module.php:32
+msgid "Add a reading"
+msgstr ""
+
+#: ./Entities/Module.php:33
+msgid "Add a task"
+msgstr ""
+
+#: ./Entities/Module.php:34
 msgid "Add assignment"
 msgstr ""
 
