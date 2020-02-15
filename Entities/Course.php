@@ -39,7 +39,6 @@ class Course extends CoursewareEntity {
     public function fieldsRequired(): array {
 	return [
 	    'name',
-	    'image',
 	    'description'
 	];
     }

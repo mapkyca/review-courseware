@@ -43,7 +43,6 @@ class Module extends CoursewareEntity {
 	return [
 	    'name',
 	    'description',
-	    'image',
 	    'video',
 	];
     }
