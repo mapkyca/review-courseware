@@ -14,6 +14,9 @@ if ($vars['value']) {
     
     <textarea style="display:none;" name="<?= $vars['name']; ?>"><?php if (!empty($vars['value'])) echo $vars['value']; ?></textarea>
     
+    
+    <input type="hidden" class="reading_id"value="<?= trim($decoded->reading_id)??""; ?>" />
+    
     <input type="url" class="url form-control" placeholder="<?= \Idno\Core\Idno::site()->language()->_('URL'); ?>" value="<?= trim($decoded->url)??""; ?>" /> 
     
     <input type="text" class="title form-control" placeholder="<?= \Idno\Core\Idno::site()->language()->_('Title'); ?>" value="<?= trim($decoded->title)??""; ?>"/>

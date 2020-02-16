@@ -11,7 +11,7 @@
     <?php
     } ?>
     
-    <form action="<?php echo $vars['object']->getURL() ?>" method="post" enctype="multipart/form-data">
+    <form action="<?php echo $vars['object'] ? $vars['object']->getEditURL() : \Idno\Core\Idno::site()->config()->getDisplayURL() . 'admin/courseware/course/edit/';?>" method="post" enctype="multipart/form-data">
 <?php
 
     echo $this->__([
@@ -156,9 +156,9 @@
 	    if (!empty($vars['object'])) {
 		?>
 	    
-	    <a href="<?php echo \Idno\Core\Idno::site()->config()->getDisplayURL() ?>schedule/edit?course_id=<?= $vars['object']->getID(); ?>" class="btn btn-lg btn-primary"><?php echo \Idno\Core\Idno::site()->language()->_('Add a Schedule'); ?></a>
+	    <a href="<?php echo \Idno\Core\Idno::site()->config()->getDisplayURL() ?>admin/courseware/schedule/edit?course_id=<?= $vars['object']->getID(); ?>" class="btn btn-lg btn-primary"><?php echo \Idno\Core\Idno::site()->language()->_('Add a Schedule'); ?></a>
 	    
-	    <a href="<?php echo \Idno\Core\Idno::site()->config()->getDisplayURL() ?>module/edit?course_id=<?= $vars['object']->getID(); ?>" class="btn btn-lg btn-primary"><?php echo \Idno\Core\Idno::site()->language()->_('Add a Module'); ?></a>
+	    <a href="<?php echo \Idno\Core\Idno::site()->config()->getDisplayURL() ?>admin/courseware/module/edit?course_id=<?= $vars['object']->getID(); ?>" class="btn btn-lg btn-primary"><?php echo \Idno\Core\Idno::site()->language()->_('Add a Module'); ?></a>
 	    
 	    <?php
 	    }
@@ -167,7 +167,7 @@
 	
 	
 	<div class="button-bar row" style="margin-top:20px;">
-	    <?php echo \Idno\Core\Idno::site()->actions()->signForm('/course/edit') ?>
+	    <?php echo \Idno\Core\Idno::site()->actions()->signForm('/admin/courseware/course/edit') ?>
 	    <input type="button" class="btn btn-cancel" value="<?php echo \Idno\Core\Idno::site()->language()->_('Cancel'); ?>" onclick="hideContentCreateForm();"/>
 	    <input type="submit" class="btn btn-primary" value="<?php echo \Idno\Core\Idno::site()->language()->_('Save'); ?>"/>
 	    

@@ -10,7 +10,8 @@
     <?php
     } ?>
     
-    <form action="<?php echo $vars['object']->getURL() ?>" method="post" enctype="multipart/form-data">
+    <form action="<?php echo $vars['object'] ? $vars['object']->getEditURL() : \Idno\Core\Idno::site()->config()->getDisplayURL() . 'admin/courseware/module/edit/'; ?>" method="post" enctype="multipart/form-data">
+	<input type="hidden" name="course_id" value="<?= $vars['object']->course_id??\Idno\Core\Input::getInput('course_id'); ?>" />
 <?php
 
     echo $this->__([
@@ -26,7 +27,7 @@
 	<?php echo $this->draw('content/access'); ?>
 	
 	<div class="button-bar row">
-	    <?php echo \Idno\Core\Idno::site()->actions()->signForm('/course/edit') ?>
+	    <?php echo \Idno\Core\Idno::site()->actions()->signForm('/admin/courseware/module/edit') ?>
 	    <input type="button" class="btn btn-cancel" value="<?php echo \Idno\Core\Idno::site()->language()->_('Cancel'); ?>" onclick="hideContentCreateForm();"/>
 	    <input type="submit" class="btn btn-primary" value="<?php echo \Idno\Core\Idno::site()->language()->_('Save'); ?>"/>
 	    

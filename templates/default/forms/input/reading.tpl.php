@@ -28,9 +28,10 @@
     
     function activate_<?= str_replace('-','_', $vars['id']); ?>() {
 	$('#<?= $vars['id']; ?>-control .reading-item input').change(function(e){
-
+	    console.log('updating');
 	    $(this).closest('.reading-item').find('textarea').val(
 		    JSON.stringify({
+			reading_id: $(this).closest('.reading-item').find('.reading_id').val(),
 			url: $(this).closest('.reading-item').find('.url').val(),
 			title: $(this).closest('.reading-item').find('.title').val(),
 			author: $(this).closest('.reading-item').find('.author').val(),
