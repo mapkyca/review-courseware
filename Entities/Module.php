@@ -5,6 +5,7 @@ namespace IdnoPlugins\Courseware\Entities;
 
 use Idno\Core\Idno;
 use IdnoPlugins\Like\Like;
+use IdnoPlugins\Event\Event;
 
 class Module extends CoursewareEntity {
     public function fields(): array {
@@ -110,6 +111,45 @@ class Module extends CoursewareEntity {
 		// Save updated readings
 		$this->readings = $readings;
 	    } 
+	    
+	    
+	    // Construct tasks out of event
+	    $tasks = \Idno\Core\Idno::site()->currentPage()->getInput('tasks');
+	    if (!empty($tasks)) {
+		foreach ($tasks as $key => $task) {
+		    
+		    $decoded = json_decode($task);
+		    if (!empty($decoded)) {
+			
+			$event = null;
+			if ($decoded->task_id) {
+			    $event = Event::getByID($decoded->task_id);
+			    
+			} else {
+			    $event = new Event();
+			    
+			    $event->course_id = $this->course_id;
+			    $event->module_id = $this->getID();
+			}
+			
+			$event->body = $decoded->description;
+			$event->title = $decoded->name;
+			$event->starttime = $decoded->start;
+			$event->endtime = $decoded->end;
+			
+			// Update blobs
+			$decoded->task_id = $event->save();
+			$tasks[$key] = json_encode($decoded);
+		    } else {
+			unset($tasks[$key]);
+		    }
+			
+		    
+		}
+		
+		// Save updated tasks
+		$this->tasks = $tasks;
+	    }
 	    
 	} 
 	
