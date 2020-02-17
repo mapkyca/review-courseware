@@ -50,16 +50,86 @@ $mainsrc = \Idno\Core\Idno::site()->config()->sanitizeAttachmentURL($mainsrc);
 	
 	
 	
+	<?php 
+
+	$readings = IdnoPlugins\Like\Like::get(['module_id' => $vars['object']->getID()]);
+	if ($readings) {
+
+	?>
+	<div class="readings row">
+	    <h2><?= \Idno\Core\Idno::site()->language()->_('The Readings'); ?></h2>
+	    
+	    <?php 
+	    foreach ($readings as $reading) {
+		?>
+		
+	    <div class="reading col-md-6">
+		<h3 class="idno-bookmark"><a href="<?php echo $reading->body; ?>" class="<?php echo $class ?> p-name"
+		    target="_blank"><?php echo $this->parseURLs(htmlentities(strip_tags($reading->body))) ?></a>
+		</h3>
+		<?php echo $this->__(['object' => $reading])->draw('entity/content/embed'); ?>
+	    </div>
+		
+		<?php
+	    }
+	    ?>
+	</div>
+	<?php 
+	}
+	?>
 	
-	readings
 	
+	<?php 
+
+	$tasks = \IdnoPlugins\Event\Event::get(['module_id' => $vars['object']->getID()]);
+	if ($tasks) {
+
+	?>
+	<div class="tasks row">
+	    <h2><?= \Idno\Core\Idno::site()->language()->_('The Tasks'); ?></h2>
+	    
+	    <?php 
+	    foreach ($tasks as $task) {
+		
+		$starttime = strtotime($task->starttime);
+		$endtime = strtotime($task->endtime);
+		$timeformat = 'l, jS F Y h:i A';
+		?>
+		
+	    <div class="task col-md-6">
+		<h3 class="p-name"><a href="<?php echo $task->getDisplayURL() ?>" class="u-url"><?php echo htmlentities(strip_tags($task->getTitle()), ENT_QUOTES, 'UTF-8'); ?></a></h3>
+		
+		<p class="p-summary">
+		    <strong><?php echo htmlentities(strip_tags($task->summary), ENT_QUOTES, 'UTF-8'); ?></strong>
+		</p>
+		
+		<p>
+		    <time class="dt-start"
+			  datetime="<?php echo date('c', $starttime) ?>"><?php echo date($timeformat, $starttime)?></time>
+		    
+		    - <time class="dt-end"
+			  datetime="<?php echo date('c', $endtime) ?>"><?php echo date('h:i A', $endtime);?></time><?php
+		    
+
+		    ?>
+		</p>
+	    </div>
+		
+		<?php
+	    }
+	    ?>
+	</div>
+	<?php 
+	}
+	?>
 	
-	tasks
-	
+    </div>
+    
+    
+    
 
 	Assignments...?
 	
-    </div>
     
     
 </div>
