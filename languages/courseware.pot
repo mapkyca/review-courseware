@@ -86,6 +86,42 @@ msgstr ""
 msgid "Add an Event"
 msgstr ""
 
+#: ./templates/default/forms/input/components/reading.tpl.php:20
+msgid "URL"
+msgstr ""
+
+#: ./templates/default/forms/input/components/reading.tpl.php:22
+msgid "Title"
+msgstr ""
+
+#: ./templates/default/forms/input/components/reading.tpl.php:24
+msgid "Author"
+msgstr ""
+
+#: ./templates/default/forms/input/components/reading.tpl.php:26
+msgid "Description"
+msgstr ""
+
+#: ./templates/default/forms/input/components/task.tpl.php:19
+msgid "Name"
+msgstr ""
+
+#: ./templates/default/forms/input/components/task.tpl.php:22
+msgid "Start date and time"
+msgstr ""
+
+#: ./templates/default/forms/input/components/task.tpl.php:27
+msgid "End date and time"
+msgstr ""
+
+#: ./templates/default/forms/input/reading.tpl.php:25
+msgid "Add another reading"
+msgstr ""
+
+#: ./templates/default/forms/input/tasks.tpl.php:25
+msgid "Add another task"
+msgstr ""
+
 #: ./templates/default/forms/input/objectives.tpl.php:25
 msgid "Add objective"
 msgstr ""
@@ -98,47 +134,43 @@ msgstr ""
 msgid "No"
 msgstr ""
 
-#: ./Entities/CoursewareEntity.php:132
+#: ./Entities/CoursewareEntity.php:134
 msgid "Image wasn't attached."
 msgstr ""
 
-#: ./Entities/CoursewareEntity.php:136
+#: ./Entities/CoursewareEntity.php:138
 msgid "This doesn't seem to be an image..."
 msgstr ""
 
-#: ./Entities/CoursewareEntity.php:156
+#: ./Entities/CoursewareEntity.php:158
 msgid "We couldn't access your image for an unknown reason. Please try again."
 msgstr ""
 
-#: ./Entities/CoursewareEntity.php:170
+#: ./Entities/CoursewareEntity.php:172
 msgid "Sorry, a required field was not provided."
 msgstr ""
 
-#: ./Entities/Module.php:28
-msgid "Name"
-msgstr ""
-
-#: ./Entities/Module.php:29
+#: ./Entities/Module.php:33
 msgid "Module Description"
 msgstr ""
 
-#: ./Entities/Module.php:30
+#: ./Entities/Module.php:34
 msgid "Upload Image"
 msgstr ""
 
-#: ./Entities/Module.php:31
+#: ./Entities/Module.php:35
 msgid "Link to Video"
 msgstr ""
 
-#: ./Entities/Module.php:32
+#: ./Entities/Module.php:36
 msgid "Add a reading"
 msgstr ""
 
-#: ./Entities/Module.php:33
+#: ./Entities/Module.php:37
 msgid "Add a task"
 msgstr ""
 
-#: ./Entities/Module.php:34
+#: ./Entities/Module.php:38
 msgid "Add assignment"
 msgstr ""
 

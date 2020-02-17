@@ -1,4 +1,4 @@
-
+.module,
 .course {
     
     .title {
@@ -6,17 +6,27 @@
 	margin-bottom: 2rem;
 	
 	h1 {
-	    
+	    text-align: center;
 	}
     }
     
     .image {
-	margin-bottom: 2rem;
-	
+	margin-bottom: 3rem;
+	text-align:center;
+    }
+    
+    img.u-featured {
+	margin-left: auto;
+	margin-right: auto;
+	width: 60%;
     }
     
     .description {
 	margin-bottom: 4rem;
+	min-height: 10rem;
+	margin-top: 4rem;
+	margin-left: 3rem;
+	margin-right: 3rem;
     }
     
     .objectives {
