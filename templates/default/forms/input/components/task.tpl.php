@@ -18,15 +18,21 @@ if ($vars['value']) {
     
     <input type="text" class="name form-control" placeholder="<?= \Idno\Core\Idno::site()->language()->_('Name'); ?>" value="<?= trim($decoded->name)??""; ?>"/>
     
+    <?php unset ($this->vars['name']);     ?>
+    
     <?= $this->__([
     'placeholder' => \Idno\Core\Idno::site()->language()->_('Start date and time'),
     'value' => trim($decoded->start)??"",
     'class' => 'start form-control'])->draw('forms/input/datetime-local'); ?>
     
+    <?php unset ($this->vars['name']);     ?>
+    
     <?= $this->__([
     'placeholder' => \Idno\Core\Idno::site()->language()->_('End date and time'),
     'value' => trim($decoded->end)??"",
     'class' => 'end form-control'])->draw('forms/input/datetime-local'); ?>
+    
+    <?php unset ($this->vars['name']);     ?>
     
     <input type="text" class="description form-control" placeholder="<?= \Idno\Core\Idno::site()->language()->_('Description'); ?>" value="<?= trim($decoded->description)??""; ?>" />
     

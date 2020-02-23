@@ -85,7 +85,7 @@ class Schedule extends Page {
 	    }
 
 	    // Save updated tasks
-	    $this->tasks = $tasks;
+	    $object->tasks = $tasks;
 	}
 	
 	$events = \Idno\Core\Idno::site()->currentPage()->getInput('events');
@@ -121,12 +121,13 @@ class Schedule extends Page {
 	    }
 
 	    // Save updated events
-	    $this->events = $events;
+	    $object->events = $events;
 	}
 	
 	
 	$object->save();
 	
+	$this->forward($_SERVER['HTTP_REFERER']);
     }
 }
 

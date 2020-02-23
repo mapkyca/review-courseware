@@ -8,7 +8,7 @@
 	<h3><?= \Idno\Core\Idno::site()->language()->_('Add a Task'); ?></h3>
 
 	<?php
-
+	
 	    echo $this->__([
 		'form' => ['tasks' => 'tasks'],
 		'defaults' => [],
@@ -39,7 +39,7 @@
 
 	
 	<div class="button-bar row">
-	    <?php echo \Idno\Core\Idno::site()->actions()->signForm(\Idno\Core\Idno::site()->currentPage()); ?>
+	    <?php echo \Idno\Core\Idno::site()->actions()->signForm('/admin/courseware/course/edit/' . $vars['course']->getID(). '/schedule/'); ?>
 	    <input type="button" class="btn btn-cancel" value="<?php echo \Idno\Core\Idno::site()->language()->_('Cancel'); ?>" onclick="hideContentCreateForm();"/>
 	    <input type="submit" class="btn btn-primary" value="<?php echo \Idno\Core\Idno::site()->language()->_('Save'); ?>"/>
 	    
