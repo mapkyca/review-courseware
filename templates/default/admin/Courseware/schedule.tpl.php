@@ -15,7 +15,7 @@
 		'required' => [],
 		'labels' => [],
 		'placeholders' => [],
-		'values' => []
+		'values' => ['tasks' => $vars['course']->tasks]
 	    ])->draw('forms/input/form-list');
 	?>
 	
@@ -33,7 +33,7 @@
 		'required' => [],
 		'labels' => [],
 		'placeholders' => [],
-		'values' => []
+		'values' => ['events' => $vars['course']->events]
 	    ])->draw('forms/input/form-list');
 	?>
 
