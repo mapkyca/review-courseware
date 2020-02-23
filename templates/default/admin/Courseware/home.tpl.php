@@ -56,7 +56,7 @@
 <div class="row" style="margin-top:20px;">
     <div class="col-md-10 col-md-offset-1">
 
-	<a href="<?= Idno\Core\Idno::site()->config()->getDisplayURL(); ?>course/edit" class="btn btn-lg btn-primary"><?= \Idno\Core\Idno::site()->language()->_('New Course'); ?></a>
+	<a href="<?= Idno\Core\Idno::site()->config()->getDisplayURL(); ?>admin/courseware/course/edit" class="btn btn-lg btn-primary"><?= \Idno\Core\Idno::site()->language()->_('New Course'); ?></a>
 	
     </div>
 </div>
