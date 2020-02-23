@@ -156,7 +156,7 @@
 	    if (!empty($vars['object'])) {
 		?>
 	    
-	    <a href="<?php echo \Idno\Core\Idno::site()->config()->getDisplayURL() ?>admin/courseware/schedule/edit?course_id=<?= $vars['object']->getID(); ?>" class="btn btn-lg btn-primary"><?php echo \Idno\Core\Idno::site()->language()->_('Add a Schedule'); ?></a>
+	    <a href="<?php echo \Idno\Core\Idno::site()->config()->getDisplayURL() ?>admin/courseware/course/edit/<?= $vars['object']->getID(); ?>/schedule/" class="btn btn-lg btn-primary"><?php echo \Idno\Core\Idno::site()->language()->_('Add a Schedule'); ?></a>
 	    
 	    <a href="<?php echo \Idno\Core\Idno::site()->config()->getDisplayURL() ?>admin/courseware/module/edit?course_id=<?= $vars['object']->getID(); ?>" class="btn btn-lg btn-primary"><?php echo \Idno\Core\Idno::site()->language()->_('Add a Module'); ?></a>
 	    
@@ -180,13 +180,13 @@
     $(document).ready(function() {
 	$('#modules').DataTable({
 	    "language": {
-		"emptyTable":     "No modules available"
+		"emptyTable":     "<?= \Idno\Core\Idno::site()->language()->_('No modules available'); ?>"
 	    }
 	});
 	
 	$('#schedule').DataTable({
 	    "language": {
-		"emptyTable":     "No schedule events available"
+		"emptyTable":     "<?= \Idno\Core\Idno::site()->language()->_('No schedule events available'); ?>"
 	    }
 	});
     } );
