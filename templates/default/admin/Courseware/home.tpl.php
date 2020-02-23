@@ -65,7 +65,7 @@
     $(document).ready(function() {
 	$('#courses').DataTable({
 	    "language": {
-		"emptyTable":     "No courses available"
+		"emptyTable":     "<?= \Idno\Core\Idno::site()->language()->_('No courses available'); ?>"
 	    }
 	});
     } );
