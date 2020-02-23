@@ -37,8 +37,6 @@
 	    ])->draw('forms/input/form-list');
 	?>
 
-	<?php echo $this->draw('content/extra'); ?>
-	<?php echo $this->draw('content/access'); ?>
 	
 	<div class="button-bar row">
 	    <?php echo \Idno\Core\Idno::site()->actions()->signForm(\Idno\Core\Idno::site()->currentPage()); ?>
