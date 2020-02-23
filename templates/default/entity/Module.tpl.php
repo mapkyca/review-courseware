@@ -123,13 +123,29 @@ $mainsrc = \Idno\Core\Idno::site()->config()->sanitizeAttachmentURL($mainsrc);
 	}
 	?>
 	
-    </div>
-    
-    
-    
-
-	Assignments...?
 	
-    
+	<div class="assessment row">
+	    <h2><?= \Idno\Core\Idno::site()->language()->_('Assessment'); ?></h2>
+	    
+	    <div class="task col-md-6">
+		<h3><?= \Idno\Core\Idno::site()->language()->_('Criteria'); ?></h3>
+		
+		<p class="p-x-criteria">
+		    <?php echo htmlentities(strip_tags($vars['object']->criteria), ENT_QUOTES, 'UTF-8'); ?>
+		</p>
+		
+	    </div>	
+	    
+	    <div class="task col-md-6">
+		<h3><?= \Idno\Core\Idno::site()->language()->_('Evidence'); ?></h3>
+		
+		<p class="p-x-evidence">
+		    <?php echo htmlentities(strip_tags($vars['object']->evidence), ENT_QUOTES, 'UTF-8'); ?>
+		</p>
+		
+	    </div>	
+	</div>
+	
+    </div>
     
 </div>

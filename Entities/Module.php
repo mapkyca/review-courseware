@@ -17,7 +17,8 @@ class Module extends CoursewareEntity {
 	    'video' => 'url',
 	    'readings' => 'reading',
 	    'tasks' => 'tasks',
-	    'assignments' => 'assignments'
+	    'criteria' => 'text',
+	    'evidence' => 'text'
 	];
     }
 
@@ -35,12 +36,16 @@ class Module extends CoursewareEntity {
 	    'video' => \Idno\Core\Idno::site()->language()->_('Link to Video'),
 	    'readings' => \Idno\Core\Idno::site()->language()->_('Add a reading'),
 	    'tasks' => \Idno\Core\Idno::site()->language()->_('Add a task'),
-	    'assignments' => \Idno\Core\Idno::site()->language()->_('Add assignment')
+	    'criteria' => \Idno\Core\Idno::site()->language()->_('Add criteria'),
+	    'evidence' => \Idno\Core\Idno::site()->language()->_('Add evidence')
 	];
     }
 
     public function fieldsPlaceholders(): array {
-	return [];
+	return [
+	    'criteria' => \Idno\Core\Idno::site()->language()->_('Assessment criteria'),
+	    'evidence' => \Idno\Core\Idno::site()->language()->_('Assessment evidence'),
+	];
     }
 
     public function fieldsRequired(): array {
