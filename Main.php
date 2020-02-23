@@ -19,6 +19,9 @@ class Main extends \Idno\Common\Plugin {
 	    
 	}
 	
+	// Course schedule
+	\Idno\Core\Idno::site()->routes()->addRoute('/admin/courseware/course/edit/([A-Za-z0-9]+)/schedule/?', Pages\Admin\Schedule::class);
+	
 	//\Idno\Core\Idno::site()->routes()->addRoute("course/([A-Za-z0-9]+)/?", IdnoPlugins\Courseware\Pages\Entities\Feed::class);
 	\Idno\Core\Idno::site()->routes()->addRoute("course/view/([A-Za-z0-9]+)/([a-z]+)/?", \IdnoPlugins\Courseware\Pages\Entities\Feed::class);
 	
