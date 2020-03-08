@@ -1,6 +1,6 @@
 <div class="module-form">
     <?php
-    if (empty($vars['object'])) {
+    if (empty($vars['object']->getID())) {
 	?>
     <h2><?= \Idno\Core\Idno::site()->language()->_('Add a New Module'); ?></h2>
     <?php
@@ -10,7 +10,7 @@
     <?php
     } ?>
     
-    <form action="<?php echo $vars['object'] ? $vars['object']->getEditURL() : \Idno\Core\Idno::site()->config()->getDisplayURL() . 'admin/courseware/module/edit/'; ?>" method="post" enctype="multipart/form-data">
+    <form action="<?php echo $vars['object']->getID() ? $vars['object']->getEditURL() : \Idno\Core\Idno::site()->config()->getDisplayURL() . 'admin/courseware/module/edit/'; ?>" method="post" enctype="multipart/form-data">
 	<input type="hidden" name="course_id" value="<?= $vars['object']->course_id??\Idno\Core\Input::getInput('course_id'); ?>" />
 <?php
 

@@ -1,7 +1,7 @@
 <div class="course-form">
     
     <?php
-    if (empty($vars['object'])) {
+    if  (empty($vars['object']->getID())) {
 	?>
     <h2><?= \Idno\Core\Idno::site()->language()->_('Add a New Course'); ?></h2>
     <?php
@@ -11,7 +11,7 @@
     <?php
     } ?>
     
-    <form action="<?php echo $vars['object'] ? $vars['object']->getEditURL() : \Idno\Core\Idno::site()->config()->getDisplayURL() . 'admin/courseware/course/edit/';?>" method="post" enctype="multipart/form-data">
+    <form action="<?php echo $vars['object']->getID() ? $vars['object']->getEditURL() : \Idno\Core\Idno::site()->config()->getDisplayURL() . 'admin/courseware/course/edit/';?>" method="post" enctype="multipart/form-data">
 <?php
 
     echo $this->__([
@@ -24,7 +24,7 @@
     ])->draw('forms/input/form-list');
 ?>
 	<?php
-	    if (!empty($vars['object'])) {
+	    if (!empty($vars['object']->getID())) {
 		?>
 	
 	<div class="row" style="margin-top:20px;">
@@ -153,7 +153,7 @@
 	
 	<div class="row" style="margin-top:20px;">
 	    <?php
-	    if (!empty($vars['object'])) {
+	    if (!empty($vars['object']) && !empty($vars['object']->getID())) {
 		?>
 	    
 	    <a href="<?php echo \Idno\Core\Idno::site()->config()->getDisplayURL() ?>admin/courseware/course/edit/<?= $vars['object']->getID(); ?>/schedule/" class="btn btn-lg btn-primary"><?php echo \Idno\Core\Idno::site()->language()->_('Add a Schedule'); ?></a>
