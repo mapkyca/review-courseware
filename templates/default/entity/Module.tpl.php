@@ -27,6 +27,9 @@ $mainsrc = preg_replace('/^(https?:\/\/\/)/', \Idno\Core\Idno::site()->config()-
 
 $src = \Idno\Core\Idno::site()->config()->sanitizeAttachmentURL($src);
 $mainsrc = \Idno\Core\Idno::site()->config()->sanitizeAttachmentURL($mainsrc);
+
+
+if (\Idno\Core\Idno::site()->currentPage()->isPermalink()) {
 ?>
 
 <div class="module">
@@ -34,14 +37,16 @@ $mainsrc = \Idno\Core\Idno::site()->config()->sanitizeAttachmentURL($mainsrc);
     <div class="col-md-12 panel">
 	
 	<div class="title panel-heading">
-	    <h1 class="p-name"><?= $vars['object']->name; ?></h1>
+	    <h1 class="p-name"><a href="<?php echo $vars['object']->getDisplayURL(); ?>"><?= $vars['object']->name; ?></a></h1>
 	</div>
 	
 	<div class="panel-body">
+	    <?php if (!empty($attachment)) { ?>
 	    <div class="image">
 		<img class="u-featured" src="<?php echo $this->makeDisplayURL($src) ?>" class="u-photo"
 		   alt="<?php echo htmlentities(strip_tags($vars['object']->alt), ENT_QUOTES, 'UTF-8'); ?>"/>
 	    </div>
+	    <?php } ?>
 
 	    <div class="description p-summary">
 		<?= $this->__(['value' => $vars['object']->description, 'object' => $vars['object']])->draw('forms/output/richtext'); ?>
@@ -149,3 +154,27 @@ $mainsrc = \Idno\Core\Idno::site()->config()->sanitizeAttachmentURL($mainsrc);
     </div>
     
 </div>
+<?php } else {
+    
+    ?>
+
+<div class="module">
+    
+    <div class="col-md-12 panel">
+	
+	<div class="title panel-heading">
+	    <h1 class="p-name"><a href="<?php echo $vars['object']->getDisplayURL(); ?>"><?= $vars['object']->name; ?></a></h1>
+	</div>
+	
+	<div class="description p-summary">
+	    <?= $this->__(['value' => $vars['object']->description, 'object' => $vars['object']])->draw('forms/output/richtext'); ?>
+	</div>
+	
+    </div>
+    
+</div>
+
+<?php
+    
+}
+?>

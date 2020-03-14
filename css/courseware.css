@@ -30,6 +30,11 @@
   overflow: hidden;
   text-overflow: ellipsis; }
 
+.module .row,
+.course .row {
+  margin-top: 1rem;
+  margin-bottom: 1rem; }
+
 .module .sidebar .owner .icon-container,
 .course .sidebar .owner .icon-container {
   width: 100px;
