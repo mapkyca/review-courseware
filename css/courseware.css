@@ -39,3 +39,8 @@
 .course .sidebar .owner .icon-container {
   width: 100px;
   height: 100px; }
+
+.course-form .row,
+.module-form .row {
+  margin-top: 2rem;
+  margin-bottom: 2rem; }
