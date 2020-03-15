@@ -8,7 +8,7 @@ if ($object instanceof IdnoPlugins\Courseware\Entities\Course && \Idno\Core\Idno
         <ul class="nav"> -->
 	    <?php if ($object->codeofconduct == 'y' || empty($object->codeofconduct)) { ?>
 	    <li>
-		<a href="<?php echo $object->getURL() ?>"><?= \Idno\Core\Idno::site()->language()->_('Code of Conduct'); ?></a>
+		<a href="<?php echo \Idno\Core\Idno::site()->config()->getDisplayURL() ?>courseware/codeofconduct/"><?= \Idno\Core\Idno::site()->language()->_('Code of Conduct'); ?></a>
 	    </li>
 	    <?php } ?>
 	    

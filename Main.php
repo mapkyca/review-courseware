@@ -6,6 +6,8 @@ class Main extends \Idno\Common\Plugin {
 
     function registerPages() {
 	
+	\Idno\Core\Idno::site()->routes()->addRoute('/courseware/codeofconduct/?', Pages\COC::class);
+	
 	\Idno\Core\Idno::site()->routes()->addRoute('/admin/courseware/?', Pages\Admin\Courseware::class);
 	
 	foreach ([
