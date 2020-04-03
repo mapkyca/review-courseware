@@ -8,5 +8,5 @@ Make sure this is in ```IdnoPlugins/Courseware```
 
 You can also install it via composer:
 
-```composer requier mapkyca/review-courseware```
+```composer require mapkyca/review-courseware```
 
