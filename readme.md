@@ -6,4 +6,7 @@ This is the initial Known reView courseware plugin.
 
 Make sure this is in ```IdnoPlugins/Courseware```
 
-You can also install it via composer, however you need to add the repository as a package source.
+You can also install it via composer:
+
+```composer requier mapkyca/review-courseware```
+
