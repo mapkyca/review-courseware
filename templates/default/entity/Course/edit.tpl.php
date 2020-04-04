@@ -116,14 +116,14 @@
 				<td><time class="dt-start" datetime="<?php echo date('c', $starttime) ?>"><?php echo date($timeformat, $starttime)?></time></td>
 				<td><time class="dt-end" datetime="<?php echo date('c', $endtime) ?>"><?php echo date('h:i A', $endtime);?></time></td>
 				<td style="width: 20%;">
-				    <?php if ($module->canEdit()) { ?>
-					<a href="<?= $module->getEditUrl() ?>" class="btn btn-primary"><?= \Idno\Core\Idno::site()->language()->_('Edit'); ?></a>
+				    <?php if ($event->canEdit()) { ?>
+					<a href="<?= $event->getEditUrl() ?>" class="btn btn-primary"><?= \Idno\Core\Idno::site()->language()->_('Edit'); ?></a>
 					<?= $this->__([
-					    'url' => $module->getDeleteUrl(),
+					    'url' => $event->getDeleteUrl(),
 					    'label' => \Idno\Core\Idno::site()->language()->_('Delete'),
 					    'class' => 'btn btn-danger',
 					    'confirm' => true,
-					    'confirm-text' => \Idno\Core\Idno::site()->language()->_('Are you sure you want to remove this course?')
+					    'confirm-text' => \Idno\Core\Idno::site()->language()->_('Are you sure you want to remove this?')
 					])->draw('forms/link'); ?>
 				    <?php } ?>
 				</td>
