@@ -72,7 +72,7 @@ if (\Idno\Core\Idno::site()->currentPage()->isPermalink()) {
 		<h3 class="idno-bookmark">
                     <a href="<?php echo $reading->body; ?>" class="<?php echo $class ?> p-name" target="_blank"><?php echo $this->parseURLs(htmlentities(strip_tags($reading->title))) ?></a>
 		</h3>
-                <p class="description"><?php echo $this->parseURLs(htmlentities(strip_tags($reading->description))) ?></p>
+                <p class="details"><?php echo $this->parseURLs(htmlentities(strip_tags($reading->description))) ?></p>
 		<?php echo $this->__(['object' => $reading])->draw('entity/content/embed'); ?>
                 <p class="author"><?php echo $this->parseURLs(htmlentities(strip_tags($reading->author))) ?></p>
 	    </div>
