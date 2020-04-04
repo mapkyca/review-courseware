@@ -54,6 +54,8 @@ if (\Idno\Core\Idno::site()->currentPage()->isPermalink()) {
 	</div>
 	
 	<div class="objectives">
+            
+            <h2><?= \Idno\Core\Idno::site()->language()->_('Objectives'); ?></h2>
 	    
 	    <?php
 	    
