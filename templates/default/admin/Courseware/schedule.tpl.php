@@ -1,7 +1,7 @@
 <div class="schedule-form">
     <h2><?= \Idno\Core\Idno::site()->language()->_('Add a Schedule'); ?></h2>
     
-    <form action="<?php echo \Idno\Core\Idno::site()->currentPage(); ?>" method="post" enctype="multipart/form-data">
+    <form action="<?php echo \Idno\Core\Idno::site()->currentPage()->currentUrl(); ?>" method="post" enctype="multipart/form-data">
 	<input type="hidden" name="course_id" value="<?= $vars['course']->getID(); ?>" />
 	
 	
