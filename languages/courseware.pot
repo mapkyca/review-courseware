@@ -1,77 +1,93 @@
-#: ./Pages/Entities/Course/Edit.php:37
-msgid "Upload a picture"
+#: ./templates/default/forms/input/tasks.tpl.php:25
+msgid "Add another task"
 msgstr ""
 
-#: ./Pages/Entities/Course/Edit.php:39
-msgid "Edit picture details"
+#: ./templates/default/forms/input/codeofconduct.tpl.php:2
+msgid "Yes"
 msgstr ""
 
-#: ./Pages/Admin/Schedule.php:31
-msgid "Schedule"
+#: ./templates/default/forms/input/codeofconduct.tpl.php:3
+msgid "No"
 msgstr ""
 
-#: ./Pages/Admin/Courseware.php:17
-msgid "Courseware"
+#: ./templates/default/forms/input/objectives.tpl.php:25
+msgid "Add objective"
 msgstr ""
 
-#: ./templates/default/admin/Courseware/schedule.tpl.php:2
-msgid "Add a Schedule"
+#: ./templates/default/forms/input/components/task.tpl.php:19
+msgid "Name"
 msgstr ""
 
-#: ./templates/default/admin/Courseware/schedule.tpl.php:8
-msgid "Add a Task"
+#: ./templates/default/forms/input/components/task.tpl.php:24
+msgid "Start date and time"
 msgstr ""
 
-#: ./templates/default/admin/Courseware/schedule.tpl.php:26
-msgid "Add an Event"
+#: ./templates/default/forms/input/components/task.tpl.php:31
+msgid "End date and time"
 msgstr ""
 
-#: ./templates/default/admin/Courseware/schedule.tpl.php:43
-msgid "Cancel"
+#: ./templates/default/forms/input/components/task.tpl.php:37
+msgid "Description"
 msgstr ""
 
-#: ./templates/default/admin/Courseware/schedule.tpl.php:44
-msgid "Save"
+#: ./templates/default/forms/input/components/reading.tpl.php:20
+msgid "URL"
 msgstr ""
 
-#: ./templates/default/admin/Courseware/home.tpl.php:34
-msgid "Edit"
+#: ./templates/default/forms/input/components/reading.tpl.php:22
+msgid "Title"
 msgstr ""
 
-#: ./templates/default/admin/Courseware/home.tpl.php:37
-msgid "Delete"
+#: ./templates/default/forms/input/components/reading.tpl.php:24
+msgid "Author"
 msgstr ""
 
-#: ./templates/default/admin/Courseware/home.tpl.php:40
-msgid "Are you sure you want to remove this course?"
+#: ./templates/default/forms/input/events.tpl.php:25
+msgid "Add another event"
 msgstr ""
 
-#: ./templates/default/admin/Courseware/home.tpl.php:59
-msgid "New Course"
+#: ./templates/default/forms/input/reading.tpl.php:25
+msgid "Add another reading"
 msgstr ""
 
-#: ./templates/default/admin/Courseware/home.tpl.php:68
-msgid "No courses available"
-msgstr ""
-
-#: ./templates/default/entity/Module.tpl.php:65
+#: ./templates/default/entity/Module.tpl.php:75
 msgid "The Readings"
 msgstr ""
 
-#: ./templates/default/entity/Module.tpl.php:94
+#: ./templates/default/entity/Module.tpl.php:106
 msgid "The Tasks"
 msgstr ""
 
-#: ./templates/default/entity/Module.tpl.php:133
+#: ./templates/default/entity/Module.tpl.php:145
 msgid "Assessment"
 msgstr ""
 
-#: ./templates/default/entity/Module.tpl.php:136
+#: ./templates/default/entity/Module.tpl.php:148
 msgid "Criteria"
 msgstr ""
 
-#: ./templates/default/entity/Module.tpl.php:145
+#: ./templates/default/entity/Module.tpl.php:157
 msgid "Evidence"
+msgstr ""
+
+#: ./templates/default/entity/Schedule/edit.tpl.php:2
+msgid "Add a Schedule"
+msgstr ""
+
+#: ./templates/default/entity/Schedule/edit.tpl.php:6
+msgid "Add a Task"
+msgstr ""
+
+#: ./templates/default/entity/Schedule/edit.tpl.php:10
+msgid "Add an Event"
+msgstr ""
+
+#: ./templates/default/entity/Schedule/edit.tpl.php:19
+msgid "Cancel"
+msgstr ""
+
+#: ./templates/default/entity/Schedule/edit.tpl.php:20
+msgid "Save"
 msgstr ""
 
 #: ./templates/default/entity/Course/edit.tpl.php:6
@@ -86,8 +102,24 @@ msgstr ""
 msgid "Modules"
 msgstr ""
 
+#: ./templates/default/entity/Course/edit.tpl.php:57
+msgid "Edit"
+msgstr ""
+
+#: ./templates/default/entity/Course/edit.tpl.php:60
+msgid "Delete"
+msgstr ""
+
+#: ./templates/default/entity/Course/edit.tpl.php:63
+msgid "Are you sure you want to remove this course?"
+msgstr ""
+
 #: ./templates/default/entity/Course/edit.tpl.php:88
 msgid "Tasks and Events"
+msgstr ""
+
+#: ./templates/default/entity/Course/edit.tpl.php:126
+msgid "Are you sure you want to remove this?"
 msgstr ""
 
 #: ./templates/default/entity/Course/edit.tpl.php:161
@@ -106,8 +138,8 @@ msgstr ""
 msgid "Code of Conduct"
 msgstr ""
 
-#: ./templates/default/entity/Course.tpl.php:137
-msgid "Events"
+#: ./templates/default/entity/Course/toolbar.tpl.php:16
+msgid "Schedule"
 msgstr ""
 
 #: ./templates/default/entity/Module/edit.tpl.php:5
@@ -118,56 +150,32 @@ msgstr ""
 msgid "Edit module %s"
 msgstr ""
 
-#: ./templates/default/forms/input/components/event.tpl.php:19
-msgid "Name"
+#: ./templates/default/entity/Course.tpl.php:68
+msgid "Objectives"
 msgstr ""
 
-#: ./templates/default/forms/input/components/event.tpl.php:24
-msgid "Start date and time"
+#: ./templates/default/entity/Course.tpl.php:149
+msgid "Events"
 msgstr ""
 
-#: ./templates/default/forms/input/components/event.tpl.php:31
-msgid "End date and time"
+#: ./templates/default/admin/Courseware/home.tpl.php:6
+msgid "Courseware"
 msgstr ""
 
-#: ./templates/default/forms/input/components/reading.tpl.php:20
-msgid "URL"
+#: ./templates/default/admin/Courseware/home.tpl.php:59
+msgid "New Course"
 msgstr ""
 
-#: ./templates/default/forms/input/components/reading.tpl.php:22
-msgid "Title"
+#: ./templates/default/admin/Courseware/home.tpl.php:68
+msgid "No courses available"
 msgstr ""
 
-#: ./templates/default/forms/input/components/reading.tpl.php:24
-msgid "Author"
+#: ./Pages/Entities/Course/Edit.php:37
+msgid "Upload a picture"
 msgstr ""
 
-#: ./templates/default/forms/input/components/reading.tpl.php:26
-msgid "Description"
-msgstr ""
-
-#: ./templates/default/forms/input/events.tpl.php:25
-msgid "Add another event"
-msgstr ""
-
-#: ./templates/default/forms/input/reading.tpl.php:25
-msgid "Add another reading"
-msgstr ""
-
-#: ./templates/default/forms/input/tasks.tpl.php:25
-msgid "Add another task"
-msgstr ""
-
-#: ./templates/default/forms/input/objectives.tpl.php:25
-msgid "Add objective"
-msgstr ""
-
-#: ./templates/default/forms/input/codeofconduct.tpl.php:2
-msgid "Yes"
-msgstr ""
-
-#: ./templates/default/forms/input/codeofconduct.tpl.php:3
-msgid "No"
+#: ./Pages/Entities/Course/Edit.php:39
+msgid "Edit picture details"
 msgstr ""
 
 #: ./Entities/CoursewareEntity.php:134
@@ -186,59 +194,59 @@ msgstr ""
 msgid "Sorry, a required field was not provided."
 msgstr ""
 
-#: ./Entities/Module.php:34
+#: ./Entities/Module.php:35
 msgid "Module Description"
 msgstr ""
 
-#: ./Entities/Module.php:35
+#: ./Entities/Module.php:36
 msgid "Upload Image"
 msgstr ""
 
-#: ./Entities/Module.php:36
-msgid "Link to Video"
-msgstr ""
-
 #: ./Entities/Module.php:37
-msgid "Add a reading"
+msgid "Image Attribution"
 msgstr ""
 
 #: ./Entities/Module.php:38
-msgid "Add a task"
+msgid "Link to Video"
 msgstr ""
 
 #: ./Entities/Module.php:39
-msgid "Add criteria"
+msgid "Add a reading"
 msgstr ""
 
 #: ./Entities/Module.php:40
+msgid "Add a task"
+msgstr ""
+
+#: ./Entities/Module.php:41
+msgid "Add criteria"
+msgstr ""
+
+#: ./Entities/Module.php:42
 msgid "Add evidence"
 msgstr ""
 
-#: ./Entities/Module.php:46
+#: ./Entities/Module.php:48
 msgid "Assessment criteria"
 msgstr ""
 
-#: ./Entities/Module.php:47
+#: ./Entities/Module.php:49
 msgid "Assessment evidence"
 msgstr ""
 
-#: ./Entities/Course.php:26
+#: ./Entities/Course.php:27
 msgid "Course Name"
 msgstr ""
 
-#: ./Entities/Course.php:28
+#: ./Entities/Course.php:30
 msgid "Alt"
 msgstr ""
 
-#: ./Entities/Course.php:29
+#: ./Entities/Course.php:31
 msgid "Course Description"
 msgstr ""
 
-#: ./Entities/Course.php:30
-msgid "Objectives"
-msgstr ""
-
-#: ./Entities/Course.php:31
+#: ./Entities/Course.php:33
 msgid "Do you want a code of conduct?"
 msgstr ""
 

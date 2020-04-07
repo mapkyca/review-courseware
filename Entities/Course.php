@@ -10,6 +10,7 @@ class Course extends CoursewareEntity {
 	    'name' => 'text',
 	    'image' => 'file',
 	    'alt' => 'text',
+            'attribution' => 'richtext',
 	    'description' => 'richtext',
 	    'objectives' => 'objectives',
 	    'codeofconduct' => 'codeofconduct',
@@ -25,6 +26,7 @@ class Course extends CoursewareEntity {
 	return [
 	    'name' => \Idno\Core\Idno::site()->language()->_('Course Name'),
 	    'image' => \Idno\Core\Idno::site()->language()->_('Upload Image'),
+            'attribution' => \Idno\Core\Idno::site()->language()->_('Image Attribution'),
 	    'alt' => \Idno\Core\Idno::site()->language()->_('Alt'),
 	    'description' => \Idno\Core\Idno::site()->language()->_('Course Description'),
 	    'objectives' => \Idno\Core\Idno::site()->language()->_('Objectives'),

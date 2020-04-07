@@ -45,6 +45,16 @@ if (\Idno\Core\Idno::site()->currentPage()->isPermalink()) {
 	    <div class="image">
 		<img class="u-featured" src="<?php echo $this->makeDisplayURL($src) ?>" class="u-photo"
 		   alt="<?php echo htmlentities(strip_tags($vars['object']->alt), ENT_QUOTES, 'UTF-8'); ?>"/>
+                
+                <?php 
+                if (!empty($vars['object']->attribution)) {
+                    ?>
+                <div class="attribution">
+                    <small><?= $vars['object']->attribution; ?></small>
+                </div>
+                <?php
+                }
+                ?>
 	    </div>
 	    <?php } ?>
 

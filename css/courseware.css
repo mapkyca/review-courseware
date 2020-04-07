@@ -9,6 +9,10 @@
 .course .image {
   margin-bottom: 3rem;
   text-align: center; }
+  .module .image .attribution,
+  .course .image .attribution {
+    margin-top: 2rem;
+    text-align: center; }
 
 .module img.u-featured,
 .course img.u-featured {
