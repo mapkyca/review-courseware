@@ -18,8 +18,8 @@ class Module extends CoursewareEntity {
 	    'video' => 'url',
 	    'readings' => 'reading',
 	    'tasks' => 'tasks',
-	    'criteria' => 'text',
-	    'evidence' => 'text'
+	    'criteria' => 'criteria',
+	    'evidence' => 'evidence'
 	];
     }
 
