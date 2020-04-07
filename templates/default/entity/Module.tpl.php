@@ -147,18 +147,34 @@ if (\Idno\Core\Idno::site()->currentPage()->isPermalink()) {
 	    <div class="task col-md-6">
 		<h3><?= \Idno\Core\Idno::site()->language()->_('Criteria'); ?></h3>
 		
-		<p class="p-x-criteria">
-		    <?php echo htmlentities(strip_tags($vars['object']->criteria), ENT_QUOTES, 'UTF-8'); ?>
-		</p>
+                <?php 
+                if (!is_array($vars['object']->criteria)) {
+                    $vars['object']->criteria = [$vars['object']->criteria ];
+                }
+                foreach ($vars['object']->criteria as $c) { ?>
+                
+                    <p class="p-x-criteria">
+                        <?php echo htmlentities(strip_tags($c), ENT_QUOTES, 'UTF-8'); ?>
+                    </p>
+                    
+                <?php } ?>
 		
 	    </div>	
 	    
 	    <div class="task col-md-6">
 		<h3><?= \Idno\Core\Idno::site()->language()->_('Evidence'); ?></h3>
 		
-		<p class="p-x-evidence">
-		    <?php echo htmlentities(strip_tags($vars['object']->evidence), ENT_QUOTES, 'UTF-8'); ?>
-		</p>
+                <?php 
+                if (!is_array($vars['object']->evidence)) {
+                    $vars['object']->evidence = [$vars['object']->evidence ];
+                }
+                foreach ($vars['object']->evidence as $e) { ?>
+                
+                    <p class="p-x-evidence">
+                        <?php echo htmlentities(strip_tags($e), ENT_QUOTES, 'UTF-8'); ?>
+                    </p>
+
+                <?php } ?>
 		
 	    </div>	
 	</div>
